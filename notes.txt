@@ -1,0 +1,13 @@
+    ANOTACIONES Y TAREAS EN PROCESO:
+________________________________________
+
+
+    - He incluido un archivo que guardará las rutas absolutas de los archivos en el servidor. 
+      Mientras trabajeré con el enrutamiento local durante los nuevos cambios que realizaré para la V2.
+
+
+    - Tengo que hacer modificaciones al registro de usuario y al formulario de hacer reconocimiento.
+        -->Ahora, en el momento de registro, el alumno debe decir que tipo de alumno es en un selector de opciones.
+        -->Los reconocimientos solo los realizarán delegados y subdelegados, por lo que se debe introducir 2 selectores (envía y recibe)
+
+        ---->>ESTOS CAMBIOS TRAEN TAMBIÉN MODIFICACIONES Y AÑADIDOS A LOS MODELOS Y CONTROLADORES

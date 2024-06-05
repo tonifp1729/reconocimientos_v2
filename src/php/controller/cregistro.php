@@ -1,6 +1,6 @@
 <?php
 
-    require_once '/home/proyectosevg/public_html/2daw00/reconocimientos/src/php/model/nuevoalumno.php';
+    require_once 'src/php/model/nuevoalumno.php';
 
     class Controladorcregistro {
         public $view;
@@ -18,6 +18,7 @@
                 $contrasena = $_POST['contrasena'];
                 $confirmacion = $_POST['confirmarContrasena'];
                 $nombre = $_POST['nombre'];
+                $tipo = $_POST['tipo'];
                 
                 if (!empty($_POST['web'])) {
                     $web = $_POST['web'];
@@ -33,7 +34,7 @@
                     $this->irregistro();
                     $error = 'correo_invalido';
                 } else {
-                    $this->registrar->insertarAlumno($nombre,$correo, $contrasena,$web);
+                    $this->registrar->insertarAlumno($nombre, $correo, $contrasena, $web, $tipo);
                     $this->view = "forminiciosesion";
                 }
             } else {
@@ -54,6 +55,9 @@
 
         public function irregistro() {
             $this->view = "registro";
+            $tipos = $this->registrar->listarTipos();
+
+            return ['tipos' => $tipos];
         }
 
     }

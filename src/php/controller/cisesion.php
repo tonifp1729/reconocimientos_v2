@@ -1,5 +1,5 @@
 <?php
-    require_once '/home/proyectosevg/public_html/2daw00/reconocimientos/src/php/model/isesion.php';
+    require_once 'src/php/model/isesion.php';
 
     class Controladorcisesion {
 

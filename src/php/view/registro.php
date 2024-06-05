@@ -23,6 +23,15 @@
                 
                 <label for="web">Web de reconocimiento (opcional):</label>
                 <input type="text" id="web" name="web">
+
+                <label for="tipo">Tipo de alumno:</label>
+                <select id="tipo" name="tipo" required>
+                    <?php
+                        foreach ($datosVista['data']['tipos'] as $tipo) {
+                            echo '<option value="'.$tipo['idTipoAlumno'].'">'.$tipo['descripcionTipo'].'</option>';
+                        }
+                    ?>
+                </select>
                 
                 <input type="submit" value="Crear">
             </form>

@@ -1,13 +1,17 @@
 --INSERCIÓN DE EJEMPLOS PARA LAS PRUEBAS EN LA BD
+INSERT INTO tiposalumno (idTipoAlumno, descripcionTipo) VALUES
+('c','Alumnos comunes'),
+('d','Delegados'),
+('s','Subdelegados');
 
-INSERT INTO alumno (nombre, correo, contrasenia, webReconocimiento) VALUES
-('Juan Pérez', 'juan@gmail.com', 'juan123', 'www.juanperez.com'),
-('María García', 'maria@gmail.com', 'maria123', 'miau'),
-('Carlos López', 'carlos@gmail.com', 'carlos123', 'www.carloslopez.com'),
-('Leandro Pan', 'leandro@gmail.com', 'leandro123', 'webleandrín'),
-('Pedro Rodríguez', 'pedro@gmail.com', 'pedro123', 'www.pedrorodriguez.com'),
-('Ana Sánchez', 'ana@gmail.com', 'ana123', 'www.anasanchez.com'),
-('Antonio Figueroa', 'antonio@gmail.com', 'antonio123', 'webaaah');
+INSERT INTO alumno (nombre, correo, contrasenia, webReconocimiento, tipoAlumno) VALUES
+('Juan Pérez', 'juan@alumnado.fundacionloyola.net', 'juan123', 'www.juanperez.com', 'c'),
+('María García', 'maria@alumnado.fundacionloyola.net', 'maria123', 'miau', 'c'),
+('Carlos López', 'carlos@alumnado.fundacionloyola.net', 'carlos123', 'www.carloslopez.com', 'c'),
+('Leandro Pan', 'leandro@alumnado.fundacionloyola.net', 'leandro123', 'webleandrín', 's'),
+('Pedro Rodríguez', 'pedro@alumnado.fundacionloyola.net', 'pedro123', 'www.pedrorodriguez.com', 'c'),
+('Ana Sánchez', 'ana@alumnado.fundacionloyola.net', 'ana123', 'www.anasanchez.com', 'c'),
+('Antonio Figueroa', 'antonio@alumnado.fundacionloyola.net', 'antonio123', 'webecita', 'd');
 
 INSERT INTO reconocimiento (momento, descripcion, idAlumEnvia, idAlumRecibe) VALUES
 ('2024-05-03', 'Excelente colaboración en el proyecto', 1, 2),

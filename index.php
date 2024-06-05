@@ -1,6 +1,6 @@
 <?php
     //ESTE ES EL CONTROLADOR PRINCIPAL DE LA APLICACIÓN
-
+    // require_once 'src/config/path.php';
     require_once 'src/config/config.php';
 
     if(!isset($_GET["controlador"])) $_GET["controlador"] = constant("DEFAULT_CONTROLLER");

@@ -1,6 +1,6 @@
 <?php 
 
-    require_once '/home/proyectosevg/public_html/2daw00/reconocimientos/src/config/config.php';
+    require_once 'src/config/config.php';
 
     class Conexiondb {
         private $host;
