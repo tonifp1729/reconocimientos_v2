@@ -12,7 +12,7 @@
 
         public function identificacion($correo, $contrasena) {
             //Consulta SQL para obtener el hash de la contraseña del usuario
-            $SQL = "SELECT idAlumno, nombre, contrasenia FROM alumno WHERE correo = ?";
+            $SQL = "SELECT idAlumno, nombre, contrasenia, tipoAlumno FROM alumno WHERE correo = ?";
             
             //Preparamos la consulta
             $consulta = $this->conexion->prepare($SQL);

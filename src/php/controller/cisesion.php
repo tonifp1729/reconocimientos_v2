@@ -24,9 +24,10 @@
     
                 if (!empty($alumno)) {
                     //Inicia sesión y redirige al índice si las credenciales son correctas
-                    session_start();
+                    // session_start();
                     $_SESSION['id'] = $alumno['idAlumno'];
                     $_SESSION['nombre'] = $alumno['nombre'];
+                    $_SESSION['tipo'] = $alumno['tipoAlumno'];
                     $this->irindice(); //PASAMOS LA INFORMACION DE LA SIGUIENTE VISTA. Este es el modo de usar un método de la propia clase
                 } else {
                     //Asignamos el mensaje de error si las credenciales introducidas son incorrectas

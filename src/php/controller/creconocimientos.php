@@ -95,6 +95,14 @@
             $this->view = "verreconocimiento";
         }
 
+        public function irespecial() {
+            if ($_SESSION['tipo'] === 'd') {
+                $this->view = "especial";
+            } else {
+                $this->irindice();
+            }
+        }
+
         /*
           * Este método se ejecuta en cuanto se utiliza este controlador para comprobar la existencia de la variable de sesión.
           * Si la variable de sesión no existe te redirige a la vista de inicio de sesión.
@@ -111,7 +119,6 @@
                 exit(); //Detenemos la ejecución para evitar posibles fallos.
             }
         }
-
     }
 
 ?>

@@ -1,10 +1,3 @@
-<?php
-    //Inicia la sesión desde el modelo y se le da continuidad al comienzo de cada página de este modo.
-    //Si no hay una sesión presente, la inicia.
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
-?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,6 +13,11 @@
             <p>Podrás ver los reconocimientos que has recibido y hacer reconocimientos a tus compañeros.</p>
             <p>¡Comienza ahora mismo!</p>
             <a href="index.php?controlador=creconocimientos&action=listarReconocimientos">Ver reconocimientos</a> | <a href="index.php?controlador=creconocimientos&action=irhacer">Hacer reconocimientos</a> | 
+            <?php
+                if ($_SESSION['tipo'] === 'd') {
+                    echo ' <a href="index.php?controlador=creconocimientos&action=irespecial">Especial para delegados</a> |';
+                }
+            ?>
             <a class="btncs" href="index.php?controlador=cisesion&action=cerrarSesion">Cerrar sesión</a>
         </div>
     </body>
